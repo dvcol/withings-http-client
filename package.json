@@ -1,21 +1,21 @@
 {
-  "name": "@dvcol/typescript-lib-template",
+  "name": "@dvcol/withings-http-client",
   "type": "module",
   "version": "1.0.0",
   "packageManager": "pnpm@9.1.0",
-  "description": "<description>",
-  "homepage": "https://github.com/dvcol/typescript-lib-template",
-  "bugs": "https://github.com/dvcol/typescript-lib-template/issues",
+  "description": "Fetch based http client for withings API\n\n",
+  "homepage": "https://github.com/dvcol/withings-http-client",
+  "bugs": "https://github.com/dvcol/withings-http-client/issues",
   "keywords": [
     "typescript",
     "library",
-    "typescript-lib-template"
+    "withings-http-client"
   ],
   "license": "MIT",
   "author": "dvcol",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dvcol/typescript-lib-template.git"
+    "url": "https://github.com/dvcol/withings-http-client.git"
   },
   "engines": {
     "node": ">=20",
@@ -51,7 +51,9 @@
     "access": "public"
   },
   "peerDependencies": {},
-  "dependencies": {},
+  "dependencies": {
+    "@dvcol/base-http-client": "^1.2.0"
+  },
   "devDependencies": {
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",

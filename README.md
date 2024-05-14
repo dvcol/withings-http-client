@@ -1,2 +1,3 @@
-# typescript-lib-template
-A basic typescript pnpm library template
+# @dvcol/withings-http-client
+
+Fetch based http client for withings API
