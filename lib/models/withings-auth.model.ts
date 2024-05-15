@@ -1,5 +1,5 @@
 import type { WithingsDataScopes } from '~/models/withings-data-scope.model';
-import type { WithingSignatureRequest } from '~/models/withings-request.model';
+import type { WithingSignatureRequest } from '~/models/withings-signature.model';
 
 export type WithingsAuthorizeRequest = {
   /** Must take the constant string value <b>code</b>. */

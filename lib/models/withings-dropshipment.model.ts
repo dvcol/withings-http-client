@@ -1,6 +1,6 @@
 import type { WithingCreatedOrder, WithingOrderStatus, WithingsOrder } from '~/models/withings-order.model';
 
-import type { WithingSignatureRequest } from '~/models/withings-request.model';
+import type { WithingSignatureRequest } from '~/models/withings-signature.model';
 
 import type { WithingsUserCreateRequest } from '~/models/withings-user.model';
 

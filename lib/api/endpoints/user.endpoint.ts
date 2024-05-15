@@ -137,6 +137,10 @@ export const user = {
   /**
    * Links the devices related to the provided <b>mac_addresses</b> and the user related to the provided <b>access_token/b>.
    * If a cellular device is listed in the <b>mac_address/b> field, it will activate this device's cellular service and invoicing.
+   *
+   * <b>Important:</b> Please note that the devices need to be authorized to be linked by API by the Partner. Please [contact Withings]{@link partner-api@withings.com} for more information on device authorization.
+   *
+   * @see [link]{@link https://developer.withings.com/api-reference/#tag/user/operation/userv2-link}
    */
   link: new WithingsClientEndpoint<WithingsUserLinkRequest, WithingsUserDeviceResponse>({
     method: HttpMethod.POST,
@@ -151,6 +155,11 @@ export const user = {
       },
     },
   }),
+  /**
+   * Unlinks the device related to the provided mac_address and the user related to the provided access_token.
+   *
+   * @see [unlink]{@link https://developer.withings.com/api-reference/#tag/user/operation/userv2-unlink}
+   */
   unLink: new WithingsClientEndpoint<WithingsUserUnLinkRequest, unknown>({
     method: HttpMethod.POST,
     url: '/v2/user?action&mac_addresses',

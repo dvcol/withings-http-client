@@ -41,6 +41,8 @@ export type WithingsApiQuery<T = unknown> = BaseQuery<BaseRequest, T>;
 export type WithingsApiTemplateOptions<T extends string | number | symbol = string> = BaseTemplateOptions<T, boolean> & {
   /** If the method requires user authentication */
   auth?: boolean;
+  /** If the method supports pagination */
+  pagination?: boolean;
   /** If the method requires secret hash */
   secret?: boolean;
   /** If the method requires signature hash and nonce token */

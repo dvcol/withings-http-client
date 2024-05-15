@@ -31,6 +31,7 @@ export const measure = {
     url: '/v2/measure?action&meastype&meastypes&category&startdate&enddate&lastupdate&offset',
     opts: {
       auth: true,
+      pagination: true,
       parameters: {
         query: {
           action: true,
@@ -75,6 +76,7 @@ export const measure = {
     url: '/v2/measure?action&startdateymd&enddateymd&lastupdate&offset&data_fields',
     opts: {
       auth: true,
+      pagination: true,
       parameters: {
         query: {
           action: true,
@@ -118,12 +120,15 @@ export const measure = {
    * Returns workout summaries, which are an aggregation all data that was captured during that workout.
    *
    * Use the Measure v2 - [Getintradayactivity]{@link https://developer.withings.com/api-reference/#operation/measurev2-getintradayactivity} service to get the high frequency data used to build this summary.
+   *
+   * @see [workout]{@link https://developer.withings.com/api-reference/#tag/measure/operation/measurev2-getworkouts}
    */
   workout: new WithingsClientEndpoint<WithingsMeasureWorkoutRequest, WithingsMeasureWorkoutResponse>({
     method: HttpMethod.POST,
     url: '/v2/measure?action&startdateymd&enddateymd&lastupdate&offset&data_fields',
     opts: {
       auth: true,
+      pagination: true,
       parameters: {
         query: {
           action: true,

@@ -259,7 +259,7 @@ export type WithingsMeasureGetRequest = {
 export type WithingsMeasureGetResponse = {
   updatetime: string;
   timezone: string;
-  more: number;
+  more: boolean;
   offset: number;
   measuregrps: WithingsMeasureGroup[];
 };
