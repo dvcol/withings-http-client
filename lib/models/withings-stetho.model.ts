@@ -1,3 +1,5 @@
+import type { WithingsPaginated } from '~/models/withings-client.model';
+
 export type WithingsStetho = {
   signal: string;
   frequency: number;
@@ -36,8 +38,6 @@ export type WithingsStethoData = {
   timezone: string;
 };
 
-export type WithingsStethoListResponse = {
-  more: boolean;
-  offset: number;
+export type WithingsStethoListResponse = WithingsPaginated<{
   series: WithingsStethoData[];
-};
+}>;

@@ -1,3 +1,5 @@
+import type { WithingsPaginated } from '~/models/withings-client.model';
+
 export type WithingsRawData = {
   data: string;
   hash_deviceid: string;
@@ -71,8 +73,6 @@ export type WithingsRawDataGetRequest = {
   offset?: number;
 };
 
-export type WithingsRawDataResponse = {
-  more: boolean;
-  offset: number;
+export type WithingsRawDataResponse = WithingsPaginated<{
   rawdata: WithingsRawData[];
-};
+}>;

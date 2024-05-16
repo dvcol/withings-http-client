@@ -1,3 +1,5 @@
+import type { WithingsPaginated } from '~/models/withings-client.model';
+
 /**
  * The following table presents the required measure data that is contained in the user data <b>measures</b> parameter.
  * The <b>measures</b> parameter must be composed of two mandatory <b>JSON</b> objects, one for the weight measurement and another with the height measurement, both with the following parameter:
@@ -256,13 +258,11 @@ export type WithingsMeasureGetRequest = {
   offset?: number;
 };
 
-export type WithingsMeasureGetResponse = {
+export type WithingsMeasureGetResponse = WithingsPaginated<{
   updatetime: string;
   timezone: string;
-  more: boolean;
-  offset: number;
   measuregrps: WithingsMeasureGroup[];
-};
+}>;
 
 export type WithingsMeasureConfirmRequest = {
   /** Service action name. Must take the constant string value <b>confirmuser</b>. */
@@ -306,11 +306,9 @@ export type WithingsMeasureActivityRequest = {
   data_fields?: string | WithingsMeasureFields | WithingsMeasureFields[];
 };
 
-export type WithingsMeasureActivityResponse = {
-  more: boolean;
-  offset: number;
+export type WithingsMeasureActivityResponse = WithingsPaginated<{
   activities: WithingsActivity[];
-};
+}>;
 
 export type WithingsMeasureActivityIntraDayRequest = {
   /** Service action name. Must take the constant string value <b>getintradayactivity</b>. */
@@ -362,8 +360,6 @@ export type WithingsMeasureWorkoutRequest = {
   data_fields?: string | WithingsWorkoutFields | WithingsWorkoutFields[];
 };
 
-export type WithingsMeasureWorkoutResponse = {
-  more: boolean;
-  offset: number;
+export type WithingsMeasureWorkoutResponse = WithingsPaginated<{
   series: WithingsWorkout[];
-};
+}>;

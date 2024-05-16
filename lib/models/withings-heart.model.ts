@@ -1,3 +1,5 @@
+import type { WithingsPaginated } from '~/models/withings-client.model';
+
 export type WithingsHeartGetRequest = {
   /** Service action name. Must take the constant string value <b>get</b> */
   action: 'get';
@@ -66,8 +68,6 @@ export type WithingsHeartData = {
   timezone: string;
 };
 
-export type WithingsHeartListResponse = {
+export type WithingsHeartListResponse = WithingsPaginated<{
   series: WithingsHeartData[];
-  more: boolean;
-  offset: number;
-};
+}>;

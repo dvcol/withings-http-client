@@ -34,6 +34,12 @@ export type WithingsApiResponse<T = unknown> = ResponseOrTypedResponse<{
   status: number;
   body: T;
 }>;
+
+export type WithingsPaginated<T> = {
+  more: boolean;
+  offset: number;
+} & T;
+
 export type WithingsClientOptions = BaseOptions<WithingsClientSettings, WithingsApiResponse>;
 
 export type WithingsApiQuery<T = unknown> = BaseQuery<BaseRequest, T>;

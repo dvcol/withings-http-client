@@ -96,6 +96,7 @@ export const notify = {
     url: '/notify?action&callbackurl&appli&signature&nonce&client_id&comment',
     opts: {
       auth: true,
+      signature: true,
       parameters: {
         query: {
           action: true,

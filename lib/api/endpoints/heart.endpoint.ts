@@ -41,6 +41,7 @@ export const heart = {
     url: '/v2/heart?action&signalid&client_id&signature&nonce&signal_token',
     opts: {
       auth: true,
+      signature: true,
       parameters: {
         query: {
           action: true,
