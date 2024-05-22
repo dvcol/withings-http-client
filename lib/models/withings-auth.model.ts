@@ -30,7 +30,7 @@ type WithingSecretRequest = {
   client_secret: string;
 };
 
-type WithingsAuthorizationCodeRequest = {
+export type WithingsAuthorizationCodeRequest = {
   /** Must take the constant string value <b>authorization_code</b>. */
   grant_type: 'authorization_code';
   /** The authorization code you received from the authorization endpoint. */
@@ -39,7 +39,7 @@ type WithingsAuthorizationCodeRequest = {
   redirect_uri: string;
 };
 
-type WithingsRefreshTokenRequest = {
+export type WithingsRefreshTokenRequest = {
   /** Must take the string value <b>requesttoken</b>. */
   grant_type: 'refresh_token';
   /** The current valid refresh_token. */
@@ -47,15 +47,15 @@ type WithingsRefreshTokenRequest = {
 };
 
 export type WithingsRequestTokenRequest<
-  Identity extends 'secret' | 'signature' = 'secret',
   GrantType extends 'authorization_code' | 'refresh_token' = 'authorization_code',
+  Identity extends 'secret' | 'signature' = 'secret',
 > = {
   /** Must take the string value requesttoken. */
   action: 'requesttoken';
   /** Your <b>Client ID</b>. */
   client_id: string;
-} & (Identity extends 'secret' ? WithingSecretRequest : WithingSignatureRequest) &
-  (GrantType extends 'authorization_code' ? WithingsAuthorizationCodeRequest : WithingsRefreshTokenRequest);
+} & (GrantType extends 'authorization_code' ? WithingsAuthorizationCodeRequest : WithingsRefreshTokenRequest) &
+  (Identity extends 'secret' ? WithingSecretRequest : WithingSignatureRequest);
 
 export type WithingsRequestTokenResponse = {
   userid: string;

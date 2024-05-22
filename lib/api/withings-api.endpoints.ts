@@ -1,5 +1,5 @@
-import { authPro } from '~/api/endpoints/auth-pro.endpoint';
-import { auth } from '~/api/endpoints/auth.endpoint';
+import { authenticationPro } from '~/api/endpoints/authentication-pro.endpoint';
+import { authentication } from '~/api/endpoints/authentication.endpoint';
 import { device } from '~/api/endpoints/device.endpoint';
 import { dropshipment } from '~/api/endpoints/dropshipment.endpoint';
 import { heart } from '~/api/endpoints/heart.endpoint';
@@ -14,7 +14,7 @@ import { stetho } from '~/api/endpoints/stetho.endpoint';
 import { user } from '~/api/endpoints/user.endpoint';
 
 export const withingsApi = {
-  auth: { ...auth, ...authPro },
+  authentication: { ...authentication, ...authenticationPro },
   dropshipment,
   order,
   user,
@@ -28,3 +28,5 @@ export const withingsApi = {
   device,
   nudge: { ...nudge, campaign },
 };
+
+export type WithingsApi = typeof withingsApi;

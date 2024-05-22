@@ -1,7 +1,7 @@
-import { auth } from '~/api/endpoints/auth.endpoint';
+import { authentication } from '~/api/endpoints/authentication.endpoint';
 import { signature } from '~/api/endpoints/signature.endpoint';
 
 export const minimalWithingsApi = {
-  auth,
+  authentication,
   signature,
 };

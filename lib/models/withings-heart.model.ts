@@ -1,5 +1,10 @@
 import type { WithingsPaginated } from '~/models/withings-client.model';
 
+/**
+ * To get the signal details, either use:
+ * * the <b>signalid</b> and an <b>access_token</b>
+ * * or the <b>client_id</b>, <b>signature</b>, <b>nonce</b> and a <b>signal_token</b>.
+ */
 export type WithingsHeartGetRequest = {
   /** Service action name. Must take the constant string value <b>get</b> */
   action: 'get';

@@ -16,6 +16,30 @@ export type WithingsNotify = {
   comment?: string;
 };
 
+/**
+ * The event send by Withings when a notification is triggered.
+ *
+ * Refer to the [notification categories]{@link https://developer.withings.com/developer-guide/v3/data-api/keep-user-data-up-to-date#notification-categories} for information about which parameters you will receive depending on the notification category you subscribe to.
+ *
+ * @see [notifications]{@link https://developer.withings.com/developer-guide/v3/data-api/keep-user-data-up-to-date/#description-of-parameters}
+ */
+export type WithingsNotifyEvent = {
+  /** The user identifier. */
+  userid: number;
+  /** The device identifier that triggered the notification. */
+  deviceid: number;
+  /** The application identifier (category of device). */
+  appli: number;
+  /** The start date of the event as an epoch date. */
+  startdate: number;
+  /** The end date of the event as an epoch date. */
+  enddate: number;
+  /** The date of the event as a YYY-MM-DD formatted string. */
+  date: string;
+  /** The action that triggered the event. */
+  action: 'delete' | 'unlink' | 'update';
+};
+
 export type WithingsNotifyListRequest = {
   /** Service action name. Must take the constant string value <b>list</b> */
   action: 'list';
@@ -36,6 +60,11 @@ export type WithingsNotifyRevokeRequest = {
   appli?: number;
 };
 
+/**
+ * To subscribe to a notification, provide either:
+ * * an <b>access_token</b> for web applications,
+ * * or a <b>signature</b>, <b>nonce</b>, and <b>client_id</b> for cellular or mobile SDK.
+ */
 export type WithingsNotifySubscribeRequest = {
   /** Service action name. Must take the constant string value <b>subscribe</b> */
   action: 'subscribe';

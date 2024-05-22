@@ -33,7 +33,7 @@ import { WithingsClientEndpoint } from '~/models/withings-client.model';
  *
  * @see [oauth2]{@link https://developer.withings.com/api-reference#tag/oauth2}
  */
-export const authPro = {
+export const authenticationPro = {
   /**
    * <b>This service will only work for partners having signed a contract with Withings (Withings Mobile SDK or Withings Cellular).</b>
    *

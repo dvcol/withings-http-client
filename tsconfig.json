@@ -15,7 +15,8 @@
     "declaration": true,
     "noEmit": true,
     "paths": {
-      "~/*": ["./*"]
+      "~/*": ["./*"],
+      "crypto": ["node_modules/crypto-browserify"]
     }
   },
   "include": ["lib", ".eslintrc.cjs"],

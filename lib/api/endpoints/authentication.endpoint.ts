@@ -35,7 +35,7 @@ import { WithingsClientEndpoint } from '~/models/withings-client.model';
  *
  * @see [oauth2]{@link https://developer.withings.com/api-reference#tag/oauth2}
  */
-export const auth = {
+export const authentication = {
   /**
    * To use the Web Authorization Flow, you'll need to construct an authorization URL with the appropriate query parameters. Here's an example of an authorization URL:
    *
