@@ -129,4 +129,11 @@ export class WithingsClient extends BaseWithingsClient {
     this.state = state;
     return this.auth;
   }
+
+  /**
+   * Clears the authentication information from the client.
+   */
+  clearAuth() {
+    this.updateAuth(() => ({}));
+  }
 }

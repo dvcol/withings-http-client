@@ -1,4 +1,3 @@
-import { BaseHeaderContentType } from '@dvcol/base-http-client';
 import { HttpMethod } from '@dvcol/base-http-client/utils/http';
 
 import type {
@@ -86,7 +85,6 @@ export const authentication = {
     method: HttpMethod.POST,
     url: '/v2/oauth2',
     opts: {
-      contentType: BaseHeaderContentType.FormUrlEncoded,
       signature: true,
       secret: true,
     },

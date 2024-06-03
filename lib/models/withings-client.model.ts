@@ -56,15 +56,15 @@ export class WithingsAuthToken extends WithingAuth {
   /** Cross-Site Request Forgery token */
   readonly csrf_token?: string;
 
-  constructor(token: WithingsRequestTokenResponse | WithingsDemoAccessResponse) {
-    super(new Date(Date.now() + token.expires_in * 1000).getTime());
+  constructor(token: WithingsRequestTokenResponse | WithingsDemoAccessResponse | WithingsAuthToken) {
+    super('expires' in token ? token.expires : new Date(Date.now() + token.expires_in * 1000).getTime());
 
     this.access_token = token.access_token;
     this.refresh_token = token.refresh_token;
 
     if ('userid' in token) this.userid = token.userid;
     if ('csrf_token' in token) this.csrf_token = token.csrf_token;
-    if ('scope' in token) this.scope = token.scope.split(',');
+    if ('scope' in token) this.scope = Array.isArray(token.scope) ? token.scope : token.scope.split(',');
   }
 }
 
