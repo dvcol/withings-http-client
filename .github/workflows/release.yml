@@ -69,6 +69,7 @@ jobs:
           echo "commit_hash=${commit_hash}" >> "$GITHUB_OUTPUT"
 
   publish:
+    if: ${{ inputs.skip-npm != true }}
     name: ☁️ Publish
     needs: release
     uses: ./.github/workflows/publish.yml

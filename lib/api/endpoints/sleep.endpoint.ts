@@ -1,6 +1,6 @@
 import { HttpMethod } from '@dvcol/base-http-client/utils/http';
 
-import type { WithingsSleepGetRequest, WithingsSleepGetResponse, WithingsSleepSummaryRequest } from '~/api/endpoints/withings-sleep.model';
+import type { WithingsSleepGetRequest, WithingsSleepGetResponse, WithingsSleepSummaryRequest } from '~/models/withings-sleep.model';
 
 import { WithingsClientEndpoint } from '~/models/withings-client.model';
 

@@ -69,7 +69,7 @@ export const authentication = {
         },
       },
     },
-    transform: params => (Array.isArray(params.scope) ? { ...params, type: params.scope.join(',') as never } : params),
+    transform: params => (Array.isArray(params.scope) ? { ...params, scope: params.scope.join(',') as never } : params),
   }),
   /**
    * Use this endpoint to request an <b>access token</b> and <b>refresh token</b> from an <b>authorization code</b> or refresh an existing <b>access token</b>.
@@ -149,6 +149,6 @@ export const authentication = {
         },
       },
     },
-    transform: params => (Array.isArray(params.scope_oauth2) ? { ...params, type: params.scope_oauth2.join(',') as never } : params),
+    transform: params => (Array.isArray(params.scope_oauth2) ? { ...params, scope_oauth2: params.scope_oauth2.join(',') as never } : params),
   }),
 };

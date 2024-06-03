@@ -1,7 +1,7 @@
 import type { WithingsDevice } from '~/models/withings-device.model';
 import type { WithingsGoal } from '~/models/withings-goal.model';
 import type { WithingsMeasure } from '~/models/withings-measure.model';
-import type { WithingSignatureRequest } from '~/models/withings-request.model';
+import type { WithingSignatureRequest } from '~/models/withings-signature.model';
 import type { WithingsUnitPreference } from '~/models/withings-unit-preference.model';
 
 export type WithingsUser = {

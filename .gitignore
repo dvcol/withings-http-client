@@ -105,3 +105,6 @@ dist
 
 #env files
 .env.local
+
+# IDE files
+.idea

@@ -21,14 +21,114 @@
     "node": ">=20",
     "pnpm": ">= 8"
   },
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "main": "./dist/clients/index.cjs",
+  "module": "./dist/clients/index.js",
+  "types": "./dist/clients/index.d.ts",
   "exports": {
     ".": {
-      "require": "./dist/index.cjs",
-      "import": "./dist/index.js",
-      "types": "./dist/index.d.ts"
+      "require": "./dist/clients/index.cjs",
+      "import": "./dist/clients/index.js",
+      "types": "./dist/clients/index.d.ts"
+    },
+    "./config": {
+      "require": "./dist/config/index.cjs",
+      "import": "./dist/config/index.js",
+      "types": "./dist/config/index.d.ts"
+    },
+    "./models": {
+      "require": "./dist/models/index.cjs",
+      "import": "./dist/models/index.js",
+      "types": "./dist/models/index.d.ts"
+    },
+    "./utils/crypto": {
+      "require": "./dist/utils/crypto.utils.cjs",
+      "import": "./dist/utils/crypto.utils.js",
+      "types": "./dist/utils/crypto.utils.d.ts"
+    },
+    "./utils/typescript": {
+      "require": "./dist/utils/typescript.utils.cjs",
+      "import": "./dist/utils/typescript.utils.js",
+      "types": "./dist/utils/typescript.utils.d.ts"
+    },
+    "./api": {
+      "require": "./dist/api/withings-api.endpoints.cjs",
+      "import": "./dist/api/withings-api.endpoints.js",
+      "types": "./dist/api/withings-api.endpoints.d.ts"
+    },
+    "./api/minimal": {
+      "require": "./dist/api/withings-api-minimal.endpoints.cjs",
+      "import": "./dist/api/withings-api-minimal.endpoints.js",
+      "types": "./dist/api/withings-api-minimal.endpoints.d.ts"
+    },
+    "./api/authentication": {
+      "require": "./dist/api/endpoints/authentication.endpoint.cjs",
+      "import": "./dist/api/endpoints/authentication.endpoint.js",
+      "types": "./dist/api/endpoints/authentication.endpoint.d.ts"
+    },
+    "./api/authentication-pro": {
+      "require": "./dist/api/endpoints/authentication-pro.endpoint.cjs",
+      "import": "./dist/api/endpoints/authentication-pro.endpoint.js",
+      "types": "./dist/api/endpoints/authentication-pro.endpoint.d.ts"
+    },
+    "./api/device": {
+      "require": "./dist/api/endpoints/device.endpoint.cjs",
+      "import": "./dist/api/endpoints/device.endpoint.js",
+      "types": "./dist/api/endpoints/device.endpoint.d.ts"
+    },
+    "./api/dropshipment": {
+      "require": "./dist/api/endpoints/dropshipment.endpoint.cjs",
+      "import": "./dist/api/endpoints/dropshipment.endpoint.js",
+      "types": "./dist/api/endpoints/dropshipment.endpoint.d.ts"
+    },
+    "./api/heart": {
+      "require": "./dist/api/endpoints/heart.endpoint.cjs",
+      "import": "./dist/api/endpoints/heart.endpoint.js",
+      "types": "./dist/api/endpoints/heart.endpoint.d.ts"
+    },
+    "./api/measure": {
+      "require": "./dist/api/endpoints/measure.endpoint.cjs",
+      "import": "./dist/api/endpoints/measure.endpoint.js",
+      "types": "./dist/api/endpoints/measure.endpoint.d.ts"
+    },
+    "./api/notify": {
+      "require": "./dist/api/endpoints/notify.endpoint.cjs",
+      "import": "./dist/api/endpoints/notify.endpoint.js",
+      "types": "./dist/api/endpoints/notify.endpoint.d.ts"
+    },
+    "./api/nudge": {
+      "require": "./dist/api/endpoints/nudge.endpoint.cjs",
+      "import": "./dist/api/endpoints/nudge.endpoint.js",
+      "types": "./dist/api/endpoints/nudge.endpoint.d.ts"
+    },
+    "./api/order": {
+      "require": "./dist/api/endpoints/order.endpoint.cjs",
+      "import": "./dist/api/endpoints/order.endpoint.js",
+      "types": "./dist/api/endpoints/order.endpoint.d.ts"
+    },
+    "./api/raw-data": {
+      "require": "./dist/api/endpoints/raw-data.endpoint.cjs",
+      "import": "./dist/api/endpoints/raw-data.endpoint.js",
+      "types": "./dist/api/endpoints/raw-data.endpoint.d.ts"
+    },
+    "./api/signature": {
+      "require": "./dist/api/endpoints/signature.endpoint.cjs",
+      "import": "./dist/api/endpoints/signature.endpoint.js",
+      "types": "./dist/api/endpoints/signature.endpoint.d.ts"
+    },
+    "./api/sleep": {
+      "require": "./dist/api/endpoints/sleep.endpoint.cjs",
+      "import": "./dist/api/endpoints/sleep.endpoint.js",
+      "types": "./dist/api/endpoints/sleep.endpoint.d.ts"
+    },
+    "./api/stetho": {
+      "require": "./dist/api/endpoints/stetho.endpoint.cjs",
+      "import": "./dist/api/endpoints/stetho.endpoint.js",
+      "types": "./dist/api/endpoints/stetho.endpoint.d.ts"
+    },
+    "./api/user": {
+      "require": "./dist/api/endpoints/user.endpoint.cjs",
+      "import": "./dist/api/endpoints/user.endpoint.js",
+      "types": "./dist/api/endpoints/user.endpoint.d.ts"
     }
   },
   "files": [

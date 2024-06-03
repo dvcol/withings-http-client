@@ -103,6 +103,13 @@ export type WithingsClientAuthentication = {
   state?: string;
 };
 
+export type AuthorizationRequest = {
+  scope?: string | WithingsDataScopes | WithingsDataScopes[];
+  redirect_uri?: string;
+  state?: string;
+  demo?: boolean;
+};
+
 export type WithingsApiParam = RecursiveRecord;
 
 export type WithingsApiResponse<T = unknown> = ResponseOrTypedResponse<{
