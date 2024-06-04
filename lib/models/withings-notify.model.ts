@@ -97,13 +97,47 @@ export type WithingsNotifySubscribeRequest = {
   comment?: string;
 };
 
+/**
+ * @see [Notification categories]{@link https://developer.withings.com/developer-guide/v3/data-api/keep-user-data-up-to-date/#notification-categories}
+ */
+export const WithingsNotifyAppliCode = {
+  /** New weight-related data amongst meastypes */
+  Weight: 1,
+  /** New temperature-related data amongst meastypes */
+  Temperature: 2,
+  /** New pressure related data amongst meastypes */
+  Pressure: 4,
+  /** New activity-related data */
+  Activity: 16,
+  /** New sleep-related data */
+  Sleep: 44,
+  /** New action on user profile */
+  UserInfo: 46,
+  /** New bed in event (user lies on bed) */
+  BedIn: 50,
+  /** New bed out event (user gets out of bed) */
+  BedOut: 51,
+  /** New inflate done event (Withings sleep sensor initial inflation is done) */
+  InflateDone: 52,
+  /** No account associated: a user tried to set-up his Withings Cellular Pro device or Wthings device using the Withings Data HUB but the device is not pre-associated to a Withings account */
+  NoAccountAssociated: 53,
+  /** New ECG data */
+  ECGData: 54,
+  /** New ECG measure failed event */
+  ECGMeasureFailed: 55,
+  /** New glucose data */
+  Glucose: 58,
+} as const;
+
+export type WithingsNotifyAppliCodes = (typeof WithingsNotifyAppliCode)[keyof typeof WithingsNotifyAppliCode];
+
 export type WithingsNotifyUpdateRequest = {
   /** Service action name. Must take the constant string value <b>update</b> */
   action?: 'update';
   /** The original callback URL to be notified. */
   callbackurl: string;
   /** Refer to the [Notifications section]{@link https://developer.withings.com/developer-guide/v3/data-api/keep-user-data-up-to-date/} to know which value you should use. */
-  appli: number;
+  appli: number | WithingsNotifyAppliCodes;
 } & RequireAtLeastOne<{
   /**
    * The new callback URL to be notified.
