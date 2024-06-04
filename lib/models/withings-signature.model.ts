@@ -7,7 +7,7 @@ export type WithingSignatureRequest = {
 
 export type WithingSignatureGetNonceRequest = {
   /** Service action name. Must take the constant string value <b>getnonce</b> */
-  action: 'getnonce';
+  action?: 'getnonce';
   /** The client identifier. */
   client_id: string;
   /** A unix timestamp. */

@@ -13,7 +13,7 @@ export type WithingsRawData = {
 
 export type WithingsRawDataActivateRequest = {
   /** Service action name. Must take the constant string value <b>activate</b> */
-  action: 'activate';
+  action?: 'activate';
   /**
    * Public device id.
    * For any device installed on a user account, can be found by calling the [User v2 - Get]{@link Public device id. For any device installed on a user account, can be found by calling the User v2 - Get webservice.} webservice.
@@ -33,7 +33,7 @@ export type WithingsRawDataActivateRequest = {
 
 export type WithingsRawDataDeactivateRequest = {
   /** Service action name. Must take the constant string value <b>deactivate</b> */
-  action: 'deactivate';
+  action?: 'deactivate';
   /**
    * Public device id.
    * For any device installed on a user account, can be found by calling the [User v2 - Get]{@link Public device id. For any device installed on a user account, can be found by calling the User v2 - Get webservice.} webservice.
@@ -48,7 +48,7 @@ export type WithingsRawDataDeactivateRequest = {
 
 export type WithingsRawDataGetRequest = {
   /** Service action name. Must take the constant string value <b>get</b> */
-  action: 'get';
+  action?: 'get';
   /**
    * Public device id.
    * For any device installed on a user account, can be found by calling the [User v2 - Get]{@link Public device id. For any device installed on a user account, can be found by calling the User v2 - Get webservice.} webservice.

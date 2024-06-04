@@ -84,6 +84,9 @@ export const authentication = {
   requestToken: new WithingsClientEndpoint<WithingsRequestTokenRequest, WithingsRequestTokenResponse>({
     method: HttpMethod.POST,
     url: '/v2/oauth2',
+    seed: {
+      action: 'requesttoken',
+    },
     opts: {
       signature: true,
       secret: true,
@@ -114,6 +117,9 @@ export const authentication = {
   revokeUser: new WithingsClientEndpoint<WithingsRevokeUserRequest, unknown>({
     method: HttpMethod.POST,
     url: '/v2/oauth2?action&client_id&nonce&signature&userid',
+    seed: {
+      action: 'revoke',
+    },
     opts: {
       signature: true,
       parameters: {
@@ -135,6 +141,9 @@ export const authentication = {
   demoAccess: new WithingsClientEndpoint<WithingsDemoAccessRequest, WithingsDemoAccessResponse>({
     method: HttpMethod.GET,
     url: '/v2/oauth2?action&client_id&nonce&signature&scope_oauth2',
+    seed: {
+      action: 'getdemoaccess',
+    },
     opts: {
       signature: true,
       parameters: {

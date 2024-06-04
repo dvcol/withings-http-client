@@ -29,6 +29,9 @@ export const measure = {
   get: new WithingsClientEndpoint<WithingsMeasureGetRequest, WithingsMeasureGetResponse>({
     method: HttpMethod.POST,
     url: '/v2/measure?action&meastype&meastypes&category&startdate&enddate&lastupdate&offset',
+    seed: {
+      action: 'getmeas',
+    },
     opts: {
       auth: true,
       pagination: true,
@@ -55,6 +58,9 @@ export const measure = {
   confirm: new WithingsClientEndpoint<WithingsMeasureConfirmRequest, unknown>({
     method: HttpMethod.POST,
     url: '/v2/measure?action&grpid&is_confirmed',
+    seed: {
+      action: 'confirmuser',
+    },
     opts: {
       auth: true,
       parameters: {
@@ -74,6 +80,9 @@ export const measure = {
   activity: new WithingsClientEndpoint<WithingsMeasureActivityRequest, WithingsMeasureActivityResponse>({
     method: HttpMethod.POST,
     url: '/v2/measure?action&startdateymd&enddateymd&lastupdate&offset&data_fields',
+    seed: {
+      action: 'getactivity',
+    },
     opts: {
       auth: true,
       pagination: true,
@@ -103,6 +112,9 @@ export const measure = {
   activityIntraDay: new WithingsClientEndpoint<WithingsMeasureActivityIntraDayRequest, WithingsMeasureActivityIntraDayResponse>({
     method: HttpMethod.POST,
     url: '/v2/measure?action&startdate&enddate&data_fields',
+    seed: {
+      action: 'getintradayactivity',
+    },
     opts: {
       auth: true,
       parameters: {
@@ -126,6 +138,9 @@ export const measure = {
   workout: new WithingsClientEndpoint<WithingsMeasureWorkoutRequest, WithingsMeasureWorkoutResponse>({
     method: HttpMethod.POST,
     url: '/v2/measure?action&startdateymd&enddateymd&lastupdate&offset&data_fields',
+    seed: {
+      action: 'getworkouts',
+    },
     opts: {
       auth: true,
       pagination: true,

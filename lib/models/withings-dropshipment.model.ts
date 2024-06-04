@@ -6,7 +6,7 @@ import type { WithingsUserCreateRequest } from '~/models/withings-user.model';
 
 export type WithingsDropshipmentCreateRequest = {
   /** Must take the constant string value <b>createorder</b>. */
-  action: 'createorder';
+  action?: 'createorder';
   /** Your <b>Client ID</b>. */
   client_id: string;
   /** Refer to [Order model]{@link https://developer.withings.com/api-reference/#tag/models/Order}. The maximum number of orders is 10 per API request. */
@@ -30,7 +30,7 @@ export type WithingsDropshipmentCreateResponse = {
 
 export type WithingsDropshipmentCreateUserRequest = {
   /** Service action name. Must take the constant string value <b>createuserorder</b>. */
-  action: 'createuserorder';
+  action?: 'createuserorder';
   /** Your <b>Client ID</b>. */
   client_id: string;
   /** The maximum number of orders is 10 per API request. */
@@ -55,7 +55,7 @@ export type WithingsDropshipmentCreateUserOrderResponse = WithingsDropshipmentCr
 
 export type WithingsDropshipmentDeleteRequest = {
   /** Service action name. Must take the constant string value <b>delete</b>. */
-  action: 'delete';
+  action?: 'delete';
   /** Your <b>Client ID</b>. */
   client_id: string;
   /** Withings generated identifier used to track your order. */
@@ -64,7 +64,7 @@ export type WithingsDropshipmentDeleteRequest = {
 
 export type WithingsDropshipmentStatusRequest = {
   /** Service action name. Must take the constant string value <b>getorderstatus</b>. */
-  action: 'getorderstatus';
+  action?: 'getorderstatus';
   /** Your <b>Client ID</b>. */
   client_id: string;
   /**
@@ -91,7 +91,7 @@ export type WithingsDropshipmentStatusResponse = {
 
 export type WithingsDropshipmentUpdateRequest = {
   /** Service action name. Must take the constant string value <b>update</b>. */
-  action: 'update';
+  action?: 'update';
   /** Your <b>Client ID</b>. */
   client_id: string;
   /** Withings generated identifier used to track your order. */
@@ -106,7 +106,7 @@ export type WithingsDropshipmentUpdateResponse = {
 
 export type WithingsOrderDetailRequest = {
   /** Service action name. Must take the constant string value <b>getdetail</b>. */
-  action: 'getdetail';
+  action?: 'getdetail';
   /** Your <b>Client ID</b>. */
   client_id: string;
   /**

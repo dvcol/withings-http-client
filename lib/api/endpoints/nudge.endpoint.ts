@@ -38,6 +38,9 @@ export const nudge = {
   create: new WithingsClientEndpoint<WithingsNudgeCreateRequest, WithingsNudgeCreateResponse>({
     method: HttpMethod.POST,
     url: '/v2/nudge?action&client_id&signature&nonce&iconids&content&model&position',
+    seed: {
+      action: 'create',
+    },
     opts: {
       signature: true,
       parameters: {
@@ -60,6 +63,9 @@ export const nudge = {
   delete: new WithingsClientEndpoint<WithingsNudgeDeleteRequest, unknown>({
     method: HttpMethod.POST,
     url: '/v2/nudge?action&client_id&signature&nonce&nudgeid',
+    seed: {
+      action: 'delete',
+    },
     opts: {
       signature: true,
       parameters: {
@@ -79,6 +85,9 @@ export const nudge = {
   get: new WithingsClientEndpoint<WithingsNudgeGetRequest, WithingsNudgeGetResponse>({
     method: HttpMethod.POST,
     url: '/v2/nudge',
+    seed: {
+      action: 'get',
+    },
     opts: {
       signature: true,
       parameters: {
@@ -98,6 +107,9 @@ export const nudge = {
   list: new WithingsClientEndpoint<WithingsNudgeListRequest, WithingsNudgeListResponse>({
     method: HttpMethod.POST,
     url: '/v2/nudge',
+    seed: {
+      action: 'list',
+    },
     opts: {
       signature: true,
       pagination: true,
@@ -118,6 +130,9 @@ export const nudge = {
   update: new WithingsClientEndpoint<WithingsNudgeUpdateRequest, unknown>({
     method: HttpMethod.POST,
     url: '/v2/nudge',
+    seed: {
+      action: 'update',
+    },
     opts: {
       signature: true,
       parameters: {
@@ -148,6 +163,9 @@ export const campaign = {
   addUser: new WithingsClientEndpoint<WithingsNudgeCampaignAddUserRequest, unknown>({
     method: HttpMethod.POST,
     url: '/v2/nudgecampaign',
+    seed: {
+      action: 'addusers',
+    },
     opts: {
       signature: true,
       parameters: {
@@ -168,6 +186,9 @@ export const campaign = {
   create: new WithingsClientEndpoint<WithingsNudgeCampaignCreateRequest, WithingsNudgeCampaignCreateResponse>({
     method: HttpMethod.POST,
     url: '/v2/nudgecampaign',
+    seed: {
+      action: 'create',
+    },
     opts: {
       signature: true,
       parameters: {
@@ -190,6 +211,9 @@ export const campaign = {
   delete: new WithingsClientEndpoint<WithingsNudgeCampaignDeleteRequest, unknown>({
     method: HttpMethod.POST,
     url: '/v2/nudgecampaign',
+    seed: {
+      action: 'delete',
+    },
     opts: {
       signature: true,
       parameters: {
@@ -209,6 +233,9 @@ export const campaign = {
   get: new WithingsClientEndpoint<WithingsNudgeCampaignGetRequest, WithingsNudgeCampaignGetResponse>({
     method: HttpMethod.POST,
     url: '/v2/nudgecampaign',
+    seed: {
+      action: 'get',
+    },
     opts: {
       signature: true,
       parameters: {
@@ -228,6 +255,9 @@ export const campaign = {
   list: new WithingsClientEndpoint<WithingsNudgeCampaignListRequest, WithingsNudgeCampaignListResponse>({
     method: HttpMethod.POST,
     url: '/v2/nudgecampaign',
+    seed: {
+      action: 'list',
+    },
     opts: {
       signature: true,
       pagination: true,
@@ -248,6 +278,9 @@ export const campaign = {
   listUsers: new WithingsClientEndpoint<WithingsNudgeCampaignListUsersRequest, WithingsNudgeCampaignListUsersResponse>({
     method: HttpMethod.POST,
     url: '/v2/nudgecampaign',
+    seed: {
+      action: 'listusers',
+    },
     opts: {
       signature: true,
       pagination: true,
@@ -269,6 +302,9 @@ export const campaign = {
   removeUser: new WithingsClientEndpoint<WithingsNudgeCampaignRemoveUserRequest, unknown>({
     method: HttpMethod.POST,
     url: '/v2/nudgecampaign',
+    seed: {
+      action: 'removeusers',
+    },
     opts: {
       signature: true,
       parameters: {
@@ -289,6 +325,9 @@ export const campaign = {
   update: new WithingsClientEndpoint<WithingsNudgeCampaignUpdateRequest, unknown>({
     method: HttpMethod.POST,
     url: '/v2/nudgecampaign',
+    seed: {
+      action: 'update',
+    },
     opts: {
       signature: true,
       parameters: {

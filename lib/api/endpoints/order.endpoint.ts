@@ -25,6 +25,9 @@ export const order = {
   detail: new WithingsClientEndpoint<WithingsOrderDetailRequest, WithingsOrderDetailResponse>({
     method: HttpMethod.POST,
     url: '/v2/order?action&client_id&nonce&signature&order_ids&customer_ref_ids&customerid',
+    seed: {
+      action: 'getdetail',
+    },
     opts: {
       signature: true,
       parameters: {

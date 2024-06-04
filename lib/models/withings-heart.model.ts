@@ -7,7 +7,7 @@ import type { WithingsPaginated } from '~/models/withings-client.model';
  */
 export type WithingsHeartGetRequest = {
   /** Service action name. Must take the constant string value <b>get</b> */
-  action: 'get';
+  action?: 'get';
   /**
    * The identifier of the signal to get.
    *
@@ -48,7 +48,7 @@ export type WithingsHeartGetResponse = {
 
 export type WithingsHeartListRequest = {
   /** Service action name. Must take the constant string value <b>list</b> */
-  action: 'list';
+  action?: 'list';
   /** Data start date as a unix timestamp. */
   startdate?: number;
   /** Data end date as a unix timestamp. */

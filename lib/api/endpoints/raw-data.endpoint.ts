@@ -26,6 +26,9 @@ export const rawData = {
   activate: new WithingsClientEndpoint<WithingsRawDataActivateRequest, unknown>({
     method: HttpMethod.POST,
     url: '/v2/rawdata?action&hash_deviceid&rawdata_type&enddate',
+    seed: {
+      action: 'activate',
+    },
     opts: {
       auth: true,
       parameters: {
@@ -47,6 +50,9 @@ export const rawData = {
   deactivate: new WithingsClientEndpoint<WithingsRawDataDeactivateRequest, unknown>({
     method: HttpMethod.POST,
     url: '/v2/rawdata?action&hash_deviceid&rawdata_type',
+    seed: {
+      action: 'deactivate',
+    },
     opts: {
       auth: true,
       parameters: {
@@ -67,6 +73,9 @@ export const rawData = {
   get: new WithingsClientEndpoint<WithingsRawDataGetRequest, WithingsRawDataResponse>({
     method: HttpMethod.POST,
     url: '/v2/rawdata?action&hash_deviceid&rawdata_type&startdate&enddate&offset',
+    seed: {
+      action: 'get',
+    },
     opts: {
       auth: true,
       pagination: true,

@@ -45,6 +45,9 @@ export const dropshipment = {
   create: new WithingsClientEndpoint<WithingsDropshipmentCreateRequest, WithingsDropshipmentCreateResponse>({
     method: HttpMethod.POST,
     url: '/v2/dropshipment?action&client_id&nonce&signature&order&customerid&testmode',
+    seed: {
+      action: 'createorder',
+    },
     opts: {
       signature: true,
       parameters: {
@@ -77,6 +80,9 @@ export const dropshipment = {
   createUser: new WithingsClientEndpoint<WithingsDropshipmentCreateUserRequest, WithingsDropshipmentCreateUserOrderResponse>({
     method: HttpMethod.POST,
     url: '/v2/dropshipment?action&client_id&nonce&signature&mailingpref&birthdate&measures&gender&preflang&unit_pref&email&timezone&shortname&external_id&order&firstname&lastname&phonenumber&recovery_code&goals&testmode',
+    seed: {
+      action: 'createuserorder',
+    },
     opts: {
       signature: true,
       parameters: {
@@ -124,6 +130,9 @@ export const dropshipment = {
   delete: new WithingsClientEndpoint<WithingsDropshipmentDeleteRequest, unknown>({
     method: HttpMethod.POST,
     url: '/v2/dropshipment?action&client_id&nonce&signature&order_id',
+    seed: {
+      action: 'delete',
+    },
     opts: {
       signature: true,
       parameters: {
@@ -151,6 +160,9 @@ export const dropshipment = {
   status: new WithingsClientEndpoint<WithingsDropshipmentStatusRequest, WithingsDropshipmentStatusResponse>({
     method: HttpMethod.POST,
     url: '/v2/dropshipment?action&client_id&nonce&signature&order_ids&customer_ref_ids&customerid&enrich',
+    seed: {
+      action: 'getorderstatus',
+    },
     opts: {
       signature: true,
       parameters: {
@@ -179,6 +191,9 @@ export const dropshipment = {
   update: new WithingsClientEndpoint<WithingsDropshipmentUpdateRequest, WithingsDropshipmentUpdateResponse>({
     method: HttpMethod.POST,
     url: '/v2/dropshipment?action&client_id&nonce&signature&order_id&status',
+    seed: {
+      action: 'update',
+    },
     opts: {
       signature: true,
       parameters: {

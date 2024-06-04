@@ -59,7 +59,7 @@ export type WithingsUserCreateRequest = WithingsUser & {
 
 export type WithingsUserActivateRequest = {
   /** Must take the constant string value <b>activate</b>. */
-  action: 'activate';
+  action?: 'activate';
   /** Your <b>Client ID</b>. */
   client_id: string;
   /**
@@ -96,7 +96,7 @@ export type WithingsUserActivateResponse = {
 
 export type WithingsUserGetRequest = {
   /** Must take the constant string value <b>get</b>. */
-  action: 'get';
+  action?: 'get';
   /** Your <b>Client ID</b>. */
   client_id: string;
   /** User's email address */
@@ -109,7 +109,7 @@ export type WithingsUserGetResponse = {
 
 export type WithingsUserDeviceRequest = {
   /** Must take the constant string value <b>getdevice</b>. */
-  action: 'getdevice';
+  action?: 'getdevice';
 };
 
 export type WithingsUserDeviceResponse = {
@@ -118,7 +118,7 @@ export type WithingsUserDeviceResponse = {
 
 export type WithingsUserGoalsRequest = {
   /** Must take the constant string value <b>getgoals</b>. */
-  action: 'getgoals';
+  action?: 'getgoals';
 };
 
 export type WithingsUserGoalsResponse = {
@@ -127,7 +127,7 @@ export type WithingsUserGoalsResponse = {
 
 export type WithingsUserLinkRequest = {
   /** Service action name. Must take the constant string value <b>link</b>. */
-  action: 'link';
+  action?: 'link';
   /**
    * List of Withings device MAC addresses that will be linked to the created user.
    * @Example: ["00:24:e4:xx:xx:xx","00:24:e4:xx:xx:xx"]
@@ -137,7 +137,7 @@ export type WithingsUserLinkRequest = {
 
 export type WithingsUserUnLinkRequest = {
   /** Service action name. Must take the constant string value <b>unlink</b>. */
-  action: 'unlink';
+  action?: 'unlink';
   /** The mac address of the target device. */
   mac_address: string;
 };

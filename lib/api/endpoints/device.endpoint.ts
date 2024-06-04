@@ -18,6 +18,9 @@ export const device = {
   disable: new WithingsClientEndpoint<WithingsDeviceDisableFeatureRequest, unknown>({
     method: HttpMethod.POST,
     url: '/v2/device?action&client_id&signature&nonce&feature_name&userid&model',
+    seed: {
+      action: 'disablefeature',
+    },
     opts: {
       signature: true,
       parameters: {
@@ -39,6 +42,9 @@ export const device = {
   enable: new WithingsClientEndpoint<WithingsDeviceEnableFeatureRequest, unknown>({
     method: HttpMethod.POST,
     url: '/v2/device?action&client_id&signature&nonce&feature_name&userid&model',
+    seed: {
+      action: 'enablefeature',
+    },
     opts: {
       signature: true,
       parameters: {
@@ -69,6 +75,9 @@ export const device = {
   updateSimStatus: new WithingsClientEndpoint<WithingsDeviceUpdateSIMStatusRequest, unknown>({
     method: HttpMethod.POST,
     url: '/v2/device?action&client_id&signature&nonce&mac_address&sim_status',
+    seed: {
+      action: 'updatesimstatus',
+    },
     opts: {
       signature: true,
       parameters: {

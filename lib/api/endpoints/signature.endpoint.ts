@@ -31,6 +31,9 @@ export const signature = {
   nonce: new WithingsClientEndpoint<WithingSignatureGetNonceRequest, WithingSignatureGetNonceResponse>({
     method: HttpMethod.GET,
     url: '/v2/signature?action&client_id&timestamp&signature',
+    seed: {
+      action: 'getnonce',
+    },
     opts: {
       signature: true,
       parameters: {

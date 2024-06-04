@@ -48,6 +48,9 @@ export const authenticationPro = {
   recoverCode: new WithingsClientEndpoint<WithingsRecoverCodeRequest, WithingsRecoverCodeResponse>({
     method: HttpMethod.POST,
     url: '/v2/oauth2?action&client_id&nonce&signature&userid',
+    seed: {
+      action: 'recoverauthorizationcode',
+    },
     opts: {
       signature: true,
       parameters: {
@@ -75,6 +78,9 @@ export const authenticationPro = {
   userList: new WithingsClientEndpoint<WithingsUserListRequest, WithingsUserListResponse | WithingsUserListResponse[]>({
     method: HttpMethod.POST,
     url: '/v2/oauth2?action&client_id&nonce&signature',
+    seed: {
+      action: 'listusers',
+    },
     opts: {
       signature: true,
       parameters: {
@@ -102,6 +108,9 @@ export const authenticationPro = {
   createClient: new WithingsClientEndpoint<WithingsCreateClientRequest, WithingsCreateClientResponse>({
     method: HttpMethod.POST,
     url: '/v2/oauth2?action&client_id&nonce&signature&name&description&intended_environment&intended_integrations&redirect_uris',
+    seed: {
+      action: 'createclient',
+    },
     opts: {
       signature: true,
       parameters: {

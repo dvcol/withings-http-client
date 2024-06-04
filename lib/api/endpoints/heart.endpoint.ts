@@ -39,6 +39,9 @@ export const heart = {
   get: new WithingsClientEndpoint<WithingsHeartGetRequest, WithingsHeartGetResponse>({
     method: HttpMethod.POST,
     url: '/v2/heart?action&signalid&client_id&signature&nonce&signal_token',
+    seed: {
+      action: 'get',
+    },
     opts: {
       auth: true,
       signature: true,
@@ -63,6 +66,9 @@ export const heart = {
   list: new WithingsClientEndpoint<WithingsHeartListRequest, WithingsHeartListResponse>({
     method: HttpMethod.POST,
     url: '/v2/heart?action&startdate&enddate&offset',
+    seed: {
+      action: 'list',
+    },
     opts: {
       auth: true,
       pagination: true,

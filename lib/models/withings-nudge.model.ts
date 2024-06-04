@@ -34,7 +34,7 @@ export type WithingsNudgeCampaignUser = {
 
 export type WithingsNudgeCreateRequest = {
   /** Service action name. Must be set to <b>create</b>. */
-  action: 'create';
+  action?: 'create';
   /** The client identifier. */
   client_id: string;
   /** The Ids of the Nudge Icon  */
@@ -63,12 +63,12 @@ type WithingsNudgeCommonRequest = {
 
 export type WithingsNudgeDeleteRequest = WithingsNudgeCommonRequest & {
   /** Service action name. Must be set to <b>delete</b>. */
-  action: 'delete';
+  action?: 'delete';
 };
 
 export type WithingsNudgeGetRequest = WithingsNudgeCommonRequest & {
   /** Service action name. Must be set to <b>get</b>. */
-  action: 'get';
+  action?: 'get';
 };
 
 export type WithingsNudgeGetResponse = {
@@ -77,7 +77,7 @@ export type WithingsNudgeGetResponse = {
 
 export type WithingsNudgeListRequest = {
   /** Service action name. Must be set to <b>list</b>. */
-  action: 'list';
+  action?: 'list';
   /** The client identifier. */
   client_id: string;
   /** When a first call returns <b>more:1</b> and <b>offset:XX</b>, set value <b>XX</b> in this parameter to retrieve next available rows. */
@@ -90,7 +90,7 @@ export type WithingsNudgeListResponse = WithingsPaginated<{
 
 export type WithingsNudgeUpdateRequest = {
   /** Service action name. Must take the string value <b>update</b>. */
-  action: 'update';
+  action?: 'update';
   /** The client identifier. */
   client_id: string;
   /** The Id of the Nudge screen */
@@ -110,7 +110,7 @@ export type WithingsNudgeUpdateRequest = {
 
 export type WithingsNudgeCampaignAddUserRequest = {
   /** Service action name. Must be set to <b>addusers</b>. */
-  action: 'addusers';
+  action?: 'addusers';
   /** The client identifier. */
   client_id: string;
   /** The Nudge campaign identifier. */
@@ -121,7 +121,7 @@ export type WithingsNudgeCampaignAddUserRequest = {
 
 export type WithingsNudgeCampaignCreateRequest = {
   /** Service action name. Must be set to <b>create</b>. */
-  action: 'create';
+  action?: 'create';
   /** The client identifier. */
   client_id: string;
   /** The Id of the Nudge screen */
@@ -147,12 +147,12 @@ export type WithingsNudgeCampaignCommonRequest = {
 
 export type WithingsNudgeCampaignDeleteRequest = WithingsNudgeCampaignCommonRequest & {
   /** Service action name. Must be set to <b>delete</b>. */
-  action: 'delete';
+  action?: 'delete';
 };
 
 export type WithingsNudgeCampaignGetRequest = WithingsNudgeCampaignCommonRequest & {
   /** Service action name. Must be set to <b>get</b>. */
-  action: 'get';
+  action?: 'get';
 };
 
 export type WithingsNudgeCampaignGetResponse = {
@@ -161,7 +161,7 @@ export type WithingsNudgeCampaignGetResponse = {
 
 export type WithingsNudgeCampaignListRequest = {
   /** Service action name. Must be set to <b>list</b>. */
-  action: 'list';
+  action?: 'list';
   /** The client identifier. */
   client_id: string;
   /** When a first call returns <b>more:1</b> and <b>offset:XX</b>, set value <b>XX</b> in this parameter to retrieve next available rows. */
@@ -174,7 +174,7 @@ export type WithingsNudgeCampaignListResponse = WithingsPaginated<{
 
 export type WithingsNudgeCampaignListUsersRequest = WithingsNudgeCampaignCommonRequest & {
   /** Service action name. Must be set to <b>listusers</b>. */
-  action: 'listusers';
+  action?: 'listusers';
   /** When a first call returns <b>more:1</b> and <b>offset:XX</b>, set value <b>XX</b> in this parameter to retrieve next available rows. */
   offset?: number;
 };
@@ -185,14 +185,14 @@ export type WithingsNudgeCampaignListUsersResponse = WithingsPaginated<{
 
 export type WithingsNudgeCampaignRemoveUserRequest = WithingsNudgeCampaignCommonRequest & {
   /** Service action name. Must be set to <b>removeusers</b>. */
-  action: 'removeusers';
+  action?: 'removeusers';
   /** The list of user identifiers to remove from the campaign. */
   userids: string[] | number[];
 } & WithingSignatureRequest;
 
 export type WithingsNudgeCampaignUpdateRequest = WithingsNudgeCampaignCommonRequest & {
   /** Service action name. Must be set to <b>update</b>. */
-  action: 'update';
+  action?: 'update';
   /** The id of the Nudge screen */
   nudgeid?: number | string;
   /** The Start date as a unix timestamp. */

@@ -17,6 +17,9 @@ export const sleep = {
   get: new WithingsClientEndpoint<WithingsSleepGetRequest, WithingsSleepGetResponse>({
     method: HttpMethod.POST,
     url: '/v2/sleep?action&startdate&enddate&data_fields&meastypes',
+    seed: {
+      action: 'get',
+    },
     opts: {
       auth: true,
       parameters: {
@@ -47,6 +50,9 @@ export const sleep = {
   summary: new WithingsClientEndpoint<WithingsSleepSummaryRequest>({
     method: HttpMethod.POST,
     url: '/v2/sleep?action&startdateymd&enddateymd&lastupdate&data_fields',
+    seed: {
+      action: 'getsummary',
+    },
     opts: {
       auth: true,
       pagination: true,

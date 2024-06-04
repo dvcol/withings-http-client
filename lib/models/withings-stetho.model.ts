@@ -14,14 +14,14 @@ export type WithingsStetho = {
 
 export type WithingsStethoRequest = {
   /** Service action name. Must take the constant string value <b>get</b> */
-  action: 'get';
+  action?: 'get';
   /** The ID of the signal to get. */
   signalid: string;
 };
 
 export type WithingsStethoListRequest = {
   /** Service action name. Must take the constant string value <b>list</b> */
-  action: 'list';
+  action?: 'list';
   /** Data start date as a unix timestamp. */
   startdate?: number;
   /** Data end date as a unix timestamp. */

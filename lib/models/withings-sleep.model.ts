@@ -25,7 +25,7 @@ export type WithingsSleepDataFields = (typeof WithingsSleepDataField)[keyof type
 
 export type WithingsSleepGetRequest = {
   /** Service action name. Must take the constant string value <b>get</b> */
-  action: 'get';
+  action?: 'get';
   /** Data start date as a unix timestamp. */
   startdate: number;
   /** Data end date as a unix timestamp. */
@@ -167,7 +167,7 @@ export type WithingsSleepSummary = {
 
 export type WithingsSleepSummaryRequest = {
   /** Service action name. Must take the constant string value <b>getsummary</b> */
-  action: 'getsummary';
+  action?: 'getsummary';
   /**
    * Start date. Required if no lastupdate.
    *

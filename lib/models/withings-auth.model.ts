@@ -51,7 +51,7 @@ export type WithingsRequestTokenRequest<
   Identity extends 'secret' | 'signature' = 'secret',
 > = {
   /** Must take the string value requesttoken. */
-  action: 'requesttoken';
+  action?: 'requesttoken';
   /** Your <b>Client ID</b>. */
   client_id: string;
 } & (GrantType extends 'authorization_code' ? WithingsAuthorizationCodeRequest : WithingsRefreshTokenRequest) &
@@ -69,7 +69,7 @@ export type WithingsRequestTokenResponse = {
 
 export type WithingsRecoverCodeRequest = {
   /** Must take the constant string value <b>recoverauthorizationcode</b>. */
-  action: 'recoverauthorizationcode';
+  action?: 'recoverauthorizationcode';
   /** Your <b>Client ID</b>. */
   client_id: string;
   /** User's email address */
@@ -84,7 +84,7 @@ export type WithingsRecoverCodeResponse = {
 
 export type WithingsUserListRequest = {
   /** Must take the constant string value <b>listusers</b>. */
-  action: 'listusers';
+  action?: 'listusers';
   /** Your <b>Client ID</b>. */
   client_id: string;
 } & WithingSignatureRequest;
@@ -98,7 +98,7 @@ export type WithingsUserListResponse = {
 
 export type WithingsRevokeUserRequest = {
   /** Must take the constant string value <b>revoke</b>. */
-  action: 'revoke';
+  action?: 'revoke';
   /** Your <b>Client ID</b>. */
   client_id: string;
   /** User's identifier. */
@@ -107,7 +107,7 @@ export type WithingsRevokeUserRequest = {
 
 export type WithingsDemoAccessRequest = {
   /** Must take the constant string value <b>getdemoaccess</b>. */
-  action: 'getdemoaccess';
+  action?: 'getdemoaccess';
   /** Your <b>Client ID</b>. */
   client_id: string;
   /** A comma-separated list of permission scopes you want to ask your user for (see the [Index Data API]{@link https://developer.withings.com/developer-guide/v3/data-api/all-available-health-data} section to know which scope you should use). */
@@ -122,7 +122,7 @@ export type WithingsDemoAccessResponse = {
 
 export type WithingsCreateClientRequest = {
   /** Must take the constant string value <b>createclient</b>. */
-  action: 'createclient';
+  action?: 'createclient';
   /** Your <b>Client ID</b>. */
   client_id: string;
   /** Specifies the OAuth2.0 application's name */

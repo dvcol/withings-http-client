@@ -28,6 +28,9 @@ export const notify = {
   get: new WithingsClientEndpoint<WithingsNotifyGetRequest, WithingsNotify>({
     method: HttpMethod.POST,
     url: '/notify?action&callbackurl&appli',
+    seed: {
+      action: 'get',
+    },
     opts: {
       auth: true,
       parameters: {
@@ -47,6 +50,9 @@ export const notify = {
   list: new WithingsClientEndpoint<WithingsNotifyListRequest, WithingsNotifyListResponse>({
     method: HttpMethod.POST,
     url: '/notify?action&appli',
+    seed: {
+      action: 'list',
+    },
     opts: {
       auth: true,
       parameters: {
@@ -65,6 +71,9 @@ export const notify = {
   revoke: new WithingsClientEndpoint<WithingsNotifyRevokeRequest, unknown>({
     method: HttpMethod.POST,
     url: '/notify?action&callbackurl&appli',
+    seed: {
+      action: 'revoke',
+    },
     opts: {
       auth: true,
       parameters: {
@@ -94,6 +103,9 @@ export const notify = {
   subscribe: new WithingsClientEndpoint<WithingsNotifySubscribeRequest, unknown>({
     method: HttpMethod.POST,
     url: '/notify?action&callbackurl&appli&signature&nonce&client_id&comment',
+    seed: {
+      action: 'subscribe',
+    },
     opts: {
       auth: true,
       signature: true,
@@ -118,6 +130,9 @@ export const notify = {
   update: new WithingsClientEndpoint<WithingsNotifyUpdateRequest, unknown>({
     method: HttpMethod.POST,
     url: '/notify?action&callbackurl&appli&new_callbackurl&new_appli&comment',
+    seed: {
+      action: 'update',
+    },
     opts: {
       auth: true,
       parameters: {

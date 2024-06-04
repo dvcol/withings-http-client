@@ -234,7 +234,7 @@ export type WithingsWorkout = {
 
 export type WithingsMeasureGetRequest = {
   /** Service action name. Must take the constant string value <b>getmeas</b>. */
-  action: 'getmeas';
+  action?: 'getmeas';
   /** Requested measure type. */
   meastype?: WithingsMeasureTypes;
   /**
@@ -266,7 +266,7 @@ export type WithingsMeasureGetResponse = WithingsPaginated<{
 
 export type WithingsMeasureConfirmRequest = {
   /** Service action name. Must take the constant string value <b>confirmuser</b>. */
-  action: 'confirmuser';
+  action?: 'confirmuser';
   /** Measure group identifier. */
   grpid: number;
   /** Indicates if the measure is was confirmed by the user. */
@@ -275,7 +275,7 @@ export type WithingsMeasureConfirmRequest = {
 
 export type WithingsMeasureActivityRequest = {
   /** Service action name. Must take the constant string value <b>getactivity</b>. */
-  action: 'getactivity';
+  action?: 'getactivity';
   /**
    * Start date.
    *
@@ -312,7 +312,7 @@ export type WithingsMeasureActivityResponse = WithingsPaginated<{
 
 export type WithingsMeasureActivityIntraDayRequest = {
   /** Service action name. Must take the constant string value <b>getintradayactivity</b>. */
-  action: 'getintradayactivity';
+  action?: 'getintradayactivity';
   /** Start date as a unix timestamp. */
   startdate?: number;
   /** End date as a unix timestamp. */
@@ -330,7 +330,7 @@ export type WithingsMeasureActivityIntraDayResponse = {
 
 export type WithingsMeasureWorkoutRequest = {
   /** Service action name. Must take the constant string value <b>getworkouts</b>. */
-  action: 'getworkouts';
+  action?: 'getworkouts';
   /**
    * Start date.
    *

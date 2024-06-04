@@ -2,7 +2,7 @@ import type { RequireAtLeastOne } from '~/utils/typescript.utils';
 
 export type WithingsNotifyGetRequest = {
   /** Service action name. Must take the constant string value <b>get</b> */
-  action: 'get';
+  action?: 'get';
   /** The callback URL to be notified. */
   callbackurl: string;
   /** Refer to the [Notifications section]{@link https://developer.withings.com/developer-guide/v3/data-api/keep-user-data-up-to-date/} to know which value you should use. */
@@ -37,12 +37,12 @@ export type WithingsNotifyEvent = {
   /** The date of the event as a YYY-MM-DD formatted string. */
   date: string;
   /** The action that triggered the event. */
-  action: 'delete' | 'unlink' | 'update';
+  action?: 'delete' | 'unlink' | 'update';
 };
 
 export type WithingsNotifyListRequest = {
   /** Service action name. Must take the constant string value <b>list</b> */
-  action: 'list';
+  action?: 'list';
   /** Refer to the [Notifications section]{@link https://developer.withings.com/developer-guide/v3/data-api/keep-user-data-up-to-date/} to know which value you should use. */
   appli?: number;
 };
@@ -53,7 +53,7 @@ export type WithingsNotifyListResponse = {
 
 export type WithingsNotifyRevokeRequest = {
   /** Service action name. Must take the constant string value <b>revoke</b> */
-  action: 'revoke';
+  action?: 'revoke';
   /** The callback URL to be removed. */
   callbackurl: string;
   /** Refer to the [Notifications section]{@link https://developer.withings.com/developer-guide/v3/data-api/keep-user-data-up-to-date/} to know which value you should use. */
@@ -67,7 +67,7 @@ export type WithingsNotifyRevokeRequest = {
  */
 export type WithingsNotifySubscribeRequest = {
   /** Service action name. Must take the constant string value <b>subscribe</b> */
-  action: 'subscribe';
+  action?: 'subscribe';
   /** The callback URL to be notified. */
   callbackurl: string;
   /** Refer to the [Notifications section]{@link https://developer.withings.com/developer-guide/v3/data-api/keep-user-data-up-to-date/} to know which value you should use. */
@@ -99,7 +99,7 @@ export type WithingsNotifySubscribeRequest = {
 
 export type WithingsNotifyUpdateRequest = {
   /** Service action name. Must take the constant string value <b>update</b> */
-  action: 'update';
+  action?: 'update';
   /** The original callback URL to be notified. */
   callbackurl: string;
   /** Refer to the [Notifications section]{@link https://developer.withings.com/developer-guide/v3/data-api/keep-user-data-up-to-date/} to know which value you should use. */

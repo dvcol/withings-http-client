@@ -40,6 +40,9 @@ export const user = {
   activate: new WithingsClientEndpoint<WithingsUserActivateRequest, WithingsUserActivateResponse>({
     method: HttpMethod.POST,
     url: '/v2/user?action&client_id&nonce&signature&mac_addresses&email&birthdate&measures&gender&preflang&unit_pref&timezone&shortname&external_id&firstname&lastname&phonenumber&recovery_code&scope_oauth2&goals&password&redirect_uri',
+    seed: {
+      action: 'activate',
+    },
     opts: {
       signature: true,
       parameters: {
@@ -83,6 +86,9 @@ export const user = {
   get: new WithingsClientEndpoint<WithingsUserGetRequest, WithingsUserGetResponse>({
     method: HttpMethod.POST,
     url: '/v2/user?action&client_id&nonce&signature&email',
+    seed: {
+      action: 'get',
+    },
     opts: {
       signature: true,
       parameters: {
@@ -106,6 +112,9 @@ export const user = {
   devices: new WithingsClientEndpoint<WithingsUserDeviceRequest, WithingsUserDeviceResponse>({
     method: HttpMethod.POST,
     url: '/v2/user?action',
+    seed: {
+      action: 'getdevice',
+    },
     opts: {
       auth: true,
       parameters: {
@@ -125,6 +134,9 @@ export const user = {
   goals: new WithingsClientEndpoint<WithingsUserGoalsRequest, WithingsUserGoalsResponse>({
     method: HttpMethod.POST,
     url: '/v2/user?action',
+    seed: {
+      action: 'getgoals',
+    },
     opts: {
       auth: true,
       parameters: {
@@ -145,6 +157,9 @@ export const user = {
   link: new WithingsClientEndpoint<WithingsUserLinkRequest, WithingsUserDeviceResponse>({
     method: HttpMethod.POST,
     url: '/v2/user?action&mac_addresses',
+    seed: {
+      action: 'link',
+    },
     opts: {
       auth: true,
       parameters: {
@@ -163,6 +178,9 @@ export const user = {
   unLink: new WithingsClientEndpoint<WithingsUserUnLinkRequest, unknown>({
     method: HttpMethod.POST,
     url: '/v2/user?action&mac_addresses',
+    seed: {
+      action: 'unlink',
+    },
     opts: {
       auth: true,
       parameters: {

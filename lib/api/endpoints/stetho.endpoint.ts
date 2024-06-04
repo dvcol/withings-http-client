@@ -14,6 +14,9 @@ export const stetho = {
   get: new WithingsClientEndpoint<WithingsStethoRequest, WithingsStetho>({
     method: HttpMethod.POST,
     url: '/v2/stetho?action&signalid',
+    seed: {
+      action: 'get',
+    },
     opts: {
       auth: true,
       parameters: {
@@ -30,6 +33,9 @@ export const stetho = {
   list: new WithingsClientEndpoint<WithingsStethoListRequest, WithingsStethoListResponse>({
     method: HttpMethod.POST,
     url: '/v2/stetho?action&startdate&enddate&offset',
+    seed: {
+      action: 'list',
+    },
     opts: {
       auth: true,
       pagination: true,

@@ -147,17 +147,17 @@ type WithingsDeviceFeatureRequest = {
 
 export type WithingsDeviceDisableFeatureRequest = {
   /** Service action name. Must take the string value <b>disablefeature</b> */
-  action: 'disablefeature';
+  action?: 'disablefeature';
 } & WithingsDeviceFeatureRequest;
 
 export type WithingsDeviceEnableFeatureRequest = {
   /** Service action name. Must take the string value <b>enablefeature</b> */
-  action: 'enablefeature';
+  action?: 'enablefeature';
 } & WithingsDeviceFeatureRequest;
 
 export type WithingsDeviceUpdateSIMStatusRequest = {
   /** Service action name. Must take the string value <b>updatesimstatus</b> */
-  action: 'updatesimstatus';
+  action?: 'updatesimstatus';
   /** The client identifier. */
   client_id: string;
   /** The mac address of the target device. */
