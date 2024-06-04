@@ -1,7 +1,7 @@
 {
   "name": "@dvcol/withings-http-client",
   "type": "module",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "packageManager": "pnpm@9.1.0",
   "description": "Fetch based http client for withings API\n\n",
   "homepage": "https://github.com/dvcol/withings-http-client",
