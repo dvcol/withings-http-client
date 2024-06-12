@@ -152,7 +152,7 @@
   },
   "peerDependencies": {},
   "dependencies": {
-    "@dvcol/base-http-client": "^1.3.0",
+    "@dvcol/base-http-client": "^1.4.2",
     "crypto-browserify": "^3.12.0"
   },
   "devDependencies": {
