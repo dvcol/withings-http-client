@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.1](https://github.com/dvcol/withings-http-client/compare/v1.1.0...v1.1.1) (2024-06-12)
+
+
+### Bug Fixes
+
+* **client:** supports cancellable promises in calls ([b8142fd](https://github.com/dvcol/withings-http-client/commit/b8142fdcfd9233df3d3cfdbe08a05c198ece7a63))
+
 ## 1.1.0 (2024-06-04)
 
 
