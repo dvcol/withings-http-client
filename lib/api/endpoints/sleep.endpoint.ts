@@ -1,4 +1,4 @@
-import { HttpMethod } from '@dvcol/base-http-client/utils/http';
+import { HttpMethod } from '@dvcol/common-utils/http';
 
 import type { WithingsSleepGetRequest, WithingsSleepGetResponse, WithingsSleepSummaryRequest } from '~/models/withings-sleep.model';
 

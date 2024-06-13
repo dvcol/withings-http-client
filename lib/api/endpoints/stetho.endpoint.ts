@@ -1,4 +1,4 @@
-import { HttpMethod } from '@dvcol/base-http-client/utils/http';
+import { HttpMethod } from '@dvcol/common-utils/http';
 
 import type { WithingsStetho, WithingsStethoListRequest, WithingsStethoListResponse, WithingsStethoRequest } from '~/models/withings-stetho.model';
 
