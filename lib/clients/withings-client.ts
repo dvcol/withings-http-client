@@ -6,7 +6,7 @@ import type {
 } from '~/models/withings-auth.model';
 import type { AuthorizationRequest, IWithingsApi, WithingsClientAuthentication, WithingsClientOptions } from '~/models/withings-client.model';
 
-import { minimalWithingsApi } from '~/api/withings-api-minimtal.endpoint';
+import { minimalWithingsApi } from '~/api/withings-api-minimal.endpoint';
 import { BaseWithingsClient } from '~/clients/base-withings-client';
 import { WithingsAuthToken } from '~/models/withings-client.model';
 
