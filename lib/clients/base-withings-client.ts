@@ -9,11 +9,13 @@ import {
 } from '@dvcol/base-http-client';
 
 import type { WithingsApi } from '~/api/withings-api.endpoints';
+
 import type {
   IWithingsApi,
   WithingsApiParam,
   WithingsApiQuery,
   WithingsApiResponse,
+  WithingsApiResponseData,
   WithingsApiTemplate,
   WithingsClientAuthentication,
   WithingsClientOptions,
@@ -23,6 +25,18 @@ import type {
 /** Needed to type Object assignment */
 // eslint-disable-next-line @typescript-eslint/no-unsafe-declaration-merging  -- To allow type extension
 export interface BaseWithingsClient extends WithingsApi {}
+
+const parseResponse = (result: WithingsApiResponseData) => {
+  if (result.status !== 0) throw result;
+  return result;
+};
+
+const patchResponse = <T extends Response>(response: T): T => {
+  const parsed: T = response;
+  const _json = parsed.json as T['json'];
+  parsed.json = async () => _json.bind(parsed)().then(parseResponse);
+  return parsed;
+};
 
 /**
  * Represents a Withings API client with common functionality.
@@ -136,13 +150,9 @@ export class BaseWithingsClient
   protected _parseResponse(response: WithingsApiResponse): WithingsApiResponse {
     if (!response.ok || response.status >= 400) throw response;
 
-    const parsed: WithingsApiResponse = response;
-    const _json = parsed.json as WithingsApiResponse['json'];
-    parsed.json = async () => {
-      const result = await _json.bind(parsed)();
-      if (result.status !== 0) throw result;
-      return result;
-    };
-    return response;
+    const parsed: WithingsApiResponse = patchResponse(response);
+    const _clone = parsed.clone;
+    parsed.clone = () => patchResponse(_clone.bind(parsed)());
+    return parsed;
   }
 }

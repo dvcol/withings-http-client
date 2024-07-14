@@ -112,11 +112,13 @@ export type AuthorizationRequest = {
 
 export type WithingsApiParam = RecursiveRecord;
 
-export type WithingsApiResponse<T = unknown> = ResponseOrTypedResponse<{
+export type WithingsApiResponseData<T = unknown> = {
   status: number;
   body: T;
   error?: string;
-}>;
+};
+
+export type WithingsApiResponse<T = unknown> = ResponseOrTypedResponse<WithingsApiResponseData<T>>;
 
 export type WithingsPaginated<T> = {
   more: boolean;
