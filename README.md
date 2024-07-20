@@ -55,6 +55,9 @@ export const settings: WithingsClientSettings = {
   endpoint: Config.endpoint,
 
   redirect_uri: '<Your redirect uri>',
+  
+  corsProxy: '<Optional cors Proxy>',
+  corsPrefix: '<Optional cors Proxy prefix>'
 };
 
 const authenticaiton = {}
